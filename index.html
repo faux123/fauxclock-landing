@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="FauxClock: kernel-level performance tuning for rooted Android. CPU governors, GPU frequency, I/O schedulers, thermal management, and Pro features like SuperFDO and Thread Control."/>
+  <meta name="robots" content="index, follow"/>
+  <title>FauxClock - Kernel Performance Tuning for Android</title>
+
+  <meta property="og:title" content="FauxClock"/>
+  <meta property="og:description" content="Kernel-level performance tuning for rooted Android"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="https://fauxclock.canonspike.com"/>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <main>
+
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero-inner">
+        <div class="logo-wrap">
+          <svg class="logo-svg" viewBox="0 0 108 108" width="120" height="120" aria-label="FauxClock gauge icon">
+            <circle cx="54" cy="54" r="31" fill="none" stroke="currentColor" stroke-width="4"/>
+            <line x1="27.2" y1="38.5" x2="33.2" y2="42.0" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+            <line x1="54" y1="23" x2="54" y2="30" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+            <line x1="80.8" y1="38.5" x2="74.8" y2="42.0" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+            <polygon points="56.6,55.5 67.0,31.5 51.4,52.5" fill="currentColor"/>
+            <circle cx="54" cy="54" r="3.5" fill="currentColor"/>
+          </svg>
+        </div>
+
+        <h1 class="hero-title">FauxClock</h1>
+        <p class="hero-tagline">Kernel-level performance tuning for rooted Android</p>
+
+        <div class="hero-actions">
+          <a href="https://github.com/faux123/Faux123_KEP/releases/latest" class="btn btn-primary">Download APK</a>
+          <a href="https://github.com/faux123/fauxclock-public" class="btn btn-secondary">Issue Tracker</a>
+        </div>
+
+        <p class="hero-version">v1.0.30 &middot; Requires root (Magisk / KernelSU / APatch)</p>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section class="features">
+      <h2 class="section-heading">What You Control</h2>
+
+      <div class="feature-grid">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2v-4M9 21H5a2 2 0 01-2-2v-4m0-4h18"/>
+            </svg>
+          </div>
+          <h3>CPU Clocks</h3>
+          <p>Per-cluster frequency limits, governor selection, and scheduling profiles. Full cpufreq control.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="4" y="4" width="16" height="16" rx="2"/>
+              <path d="M9 9h6v6H9z"/>
+              <path d="M9 1v3M15 1v3M9 20v3M15 20v3M1 9h3M1 15h3M20 9h3M20 15h3"/>
+            </svg>
+          </div>
+          <h3>GPU Frequency</h3>
+          <p>Mali and Adreno frequency caps, governor tuning, and power-level selection.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 12H2M5.45 5.11L2 12v6a2 2 0 002 2h16a2 2 0 002-2v-6l-3.45-6.89A2 2 0 0016.76 4H7.24a2 2 0 00-1.79 1.11z"/>
+              <line x1="6" y1="16" x2="6.01" y2="16"/>
+              <line x1="10" y1="16" x2="10.01" y2="16"/>
+            </svg>
+          </div>
+          <h3>Memory &amp; I/O</h3>
+          <p>VM tunables, KSM control, I/O scheduler selection, and readahead tuning.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M5 12.55a11 11 0 0114.08 0M1.42 9a16 16 0 0121.16 0M8.53 16.11a6 6 0 016.95 0M12 20h.01"/>
+            </svg>
+          </div>
+          <h3>Network</h3>
+          <p>TCP congestion control, queueing disciplines, and buffer tuning.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/>
+            </svg>
+          </div>
+          <h3>Kernel Flashing</h3>
+          <p>Flash AnyKernel3 zips directly through the app via your root manager.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"/>
+              <path d="M12 6v6l4 2"/>
+            </svg>
+          </div>
+          <h3>Haptic Tuning</h3>
+          <p>Per-vendor brake, tail, and compensation parameters for haptic motors.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+              <circle cx="12" cy="12" r="3"/>
+            </svg>
+          </div>
+          <h3>Vision / Color</h3>
+          <p>Per-app color bias: saturation, warmth, and grayscale overrides.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 20V10M6 20V4M18 20v-4"/>
+            </svg>
+          </div>
+          <h3>Capability Matrix</h3>
+          <p>See exactly which kernel APIs your device supports at a glance.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pro -->
+    <section class="pro">
+      <div class="pro-inner">
+        <h2 class="section-heading">FauxClock Pro</h2>
+        <p class="pro-subtitle">Advanced performance features for power users.</p>
+
+        <div class="pro-grid">
+          <div class="pro-card">
+            <h3>SuperFDO</h3>
+            <p>System-wide uclamp floor with workload classification and thermal gating. Goes beyond static tweaks with adaptive, sensor-driven scheduling.</p>
+          </div>
+          <div class="pro-card">
+            <h3>Per-App Uclamp</h3>
+            <p>Per-TID sched_setattr with in-app GUI. Pin minimum performance floors to individual threads without editing JSON configs.</p>
+          </div>
+          <div class="pro-card">
+            <h3>Thread Control</h3>
+            <p>Per-TID cluster pinning (sched_setaffinity), I/O priority (ionice), and nice values (renice). Full thread placement control through a real GUI.</p>
+          </div>
+        </div>
+
+        <div class="pro-cta">
+          <p>Activate with a license key at <code>Settings &rarr; FauxClock Pro</code></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Community -->
+    <section class="community">
+      <h2 class="section-heading">Community Benchmarks</h2>
+      <p class="community-desc">Opt-in anonymous telemetry aggregates battery drain, thermal headroom, and throttle events across devices. See how your kernel config stacks up against the community.</p>
+    </section>
+
+    <!-- Download -->
+    <section class="download">
+      <div class="download-inner">
+        <h2 class="section-heading">Get FauxClock</h2>
+        <div class="download-grid">
+          <div class="download-card">
+            <h3>Requirements</h3>
+            <ul>
+              <li>Android 8.0+ (API 26)</li>
+              <li>Root access (Magisk, KernelSU, or APatch)</li>
+              <li>Busybox</li>
+            </ul>
+          </div>
+          <div class="download-card">
+            <h3>Download</h3>
+            <p>Grab the latest signed APK from GitHub Releases.</p>
+            <a href="https://github.com/faux123/Faux123_KEP/releases/latest" class="btn btn-primary">Latest Release</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-inner">
+        <div class="footer-links">
+          <a href="https://github.com/faux123/fauxclock-public">Issues</a>
+          <a href="https://xdaforums.com/m/faux123.1614889/">XDA</a>
+          <a href="https://github.com/faux123">GitHub</a>
+        </div>
+        <p class="footer-copy">&copy; 2026 Paul Reioux. All rights reserved.</p>
+      </div>
+    </footer>
+
+  </main>
+
+</body>
+</html>
