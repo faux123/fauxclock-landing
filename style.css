@@ -16,7 +16,7 @@
   --font-body:  'Inter', system-ui, -apple-system, sans-serif;
   --font-mono:  'JetBrains Mono', 'Fira Code', monospace;
 
-  --max-w:      960px;
+  --max-w:      1080px;
   --section-pad: clamp(3rem, 6vw, 5rem);
   --h-pad:      clamp(1.25rem, 4vw, 2.5rem);
 
@@ -159,129 +159,144 @@ main {
   color: var(--color-text);
 }
 
-/* ── Features ── */
+/* ── Showcase (screenshot panels) ── */
 
-.features {
-  padding: var(--section-pad) 0;
-}
-
-.feature-grid {
+.showcase {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 1rem;
-}
-
-.feature-card {
-  background: var(--color-bg-raised);
-  border: 1px solid var(--color-border);
-  border-radius: 12px;
-  padding: 1.5rem;
-  transition: border-color 0.2s var(--ease-out), box-shadow 0.2s var(--ease-out);
-}
-
-.feature-card:hover {
-  border-color: var(--color-blue-dim);
-  box-shadow: 0 0 24px var(--color-blue-glow);
-}
-
-.feature-icon {
-  color: var(--color-blue-light);
-  margin-bottom: 0.75rem;
-}
-
-.feature-card h3 {
-  font-size: 1rem;
-  font-weight: 600;
-  margin-bottom: 0.4rem;
-}
-
-.feature-card p {
-  font-size: 0.88rem;
-  color: var(--color-muted);
-  line-height: 1.55;
-}
-
-/* ── Pro ── */
-
-.pro {
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(2rem, 4vw, 4rem);
+  align-items: center;
   padding: var(--section-pad) 0;
+  border-top: 1px solid var(--color-border);
 }
 
-.pro-inner {
-  background: var(--color-bg-card);
-  border: 1px solid var(--color-border);
-  border-radius: 16px;
-  padding: clamp(2rem, 4vw, 3rem);
+.showcase:first-of-type {
+  border-top: none;
 }
 
-.pro-subtitle {
-  color: var(--color-muted);
-  margin-top: -1rem;
-  margin-bottom: 2rem;
-  font-size: 0.95rem;
+.showcase-reverse {
+  direction: rtl;
 }
 
-.pro-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 1.25rem;
+.showcase-reverse > * {
+  direction: ltr;
 }
 
-.pro-card {
-  background: var(--color-bg-raised);
-  border: 1px solid var(--color-border);
-  border-radius: 10px;
-  padding: 1.25rem;
-}
-
-.pro-card h3 {
-  font-size: 0.95rem;
-  font-weight: 600;
+.showcase-label {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 500;
   color: var(--color-blue-light);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
   margin-bottom: 0.5rem;
-  font-family: var(--font-mono);
+  padding: 0.2em 0.6em;
+  background: var(--color-blue-glow);
+  border: 1px solid var(--color-blue-dim);
+  border-radius: 4px;
 }
 
-.pro-card p {
-  font-size: 0.85rem;
+.showcase-content h2 {
+  font-size: clamp(1.3rem, 2.8vw, 1.7rem);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  margin-bottom: 0.75rem;
+  line-height: 1.25;
+}
+
+.showcase-content p {
   color: var(--color-muted);
-  line-height: 1.6;
+  font-size: 0.92rem;
+  line-height: 1.65;
+  margin-bottom: 1rem;
 }
 
-.pro-cta {
-  margin-top: 1.5rem;
-  text-align: center;
-  color: var(--color-dim);
+.showcase-highlights {
+  list-style: none;
+  padding: 0;
+}
+
+.showcase-highlights li {
   font-size: 0.88rem;
+  color: var(--color-muted);
+  padding: 0.3rem 0;
+  padding-left: 1.2em;
+  position: relative;
 }
 
-.pro-cta code {
+.showcase-highlights li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.7em;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--color-blue);
+}
+
+/* ── Phone Frame ── */
+
+.showcase-phone {
+  display: flex;
+  justify-content: center;
+}
+
+.phone-frame {
+  position: relative;
+  width: 260px;
+  background: #1a1c24;
+  border: 3px solid #333640;
+  border-radius: 32px;
+  padding: 12px 8px;
+  box-shadow:
+    0 4px 24px rgba(0, 0, 0, 0.5),
+    0 0 0 1px rgba(255, 255, 255, 0.04),
+    0 20px 60px -10px rgba(21, 101, 192, 0.1);
+}
+
+.phone-frame img {
+  width: 100%;
+  height: auto;
+  border-radius: 22px;
+  display: block;
+}
+
+/* ── Pro Heading ── */
+
+.pro-heading {
+  padding: var(--section-pad) 0 1rem;
+  border-top: 1px solid var(--color-border);
+  text-align: center;
+}
+
+.pro-heading-sub {
+  color: var(--color-muted);
+  font-size: 0.95rem;
+  margin-top: -1rem;
+}
+
+.pro-heading-sub code {
   font-family: var(--font-mono);
   color: var(--color-muted);
-  background: var(--color-bg);
+  background: var(--color-bg-raised);
   padding: 0.15em 0.5em;
   border-radius: 4px;
   font-size: 0.85em;
 }
 
-/* ── Community ── */
-
-.community {
-  padding: var(--section-pad) 0;
-  text-align: center;
-}
-
-.community-desc {
-  color: var(--color-muted);
-  max-width: 580px;
-  margin: 0 auto;
-  font-size: 0.95rem;
+.showcase-label-pro {
+  background: linear-gradient(135deg, var(--color-blue-glow), rgba(66, 165, 245, 0.15));
+  border-color: var(--color-blue-light);
+  color: #64B5F6;
 }
 
 /* ── Download ── */
 
 .download {
   padding: var(--section-pad) 0;
+  border-top: 1px solid var(--color-border);
 }
 
 .download-grid {
@@ -312,14 +327,19 @@ main {
   font-size: 0.9rem;
   color: var(--color-muted);
   padding: 0.25rem 0;
+  padding-left: 1.2em;
+  position: relative;
 }
 
 .download-card li::before {
-  content: "\2022";
-  color: var(--color-blue);
-  font-weight: bold;
-  display: inline-block;
-  width: 1em;
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.7em;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--color-blue);
 }
 
 .download-card p {
@@ -370,9 +390,22 @@ main {
 
 /* ── Responsive ── */
 
-@media (max-width: 600px) {
-  .feature-grid {
+@media (max-width: 768px) {
+  .showcase {
     grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .showcase-reverse {
+    direction: ltr;
+  }
+
+  .showcase-phone {
+    order: -1;
+  }
+
+  .phone-frame {
+    width: 220px;
   }
 
   .pro-grid {

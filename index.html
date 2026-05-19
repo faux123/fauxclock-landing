@@ -48,134 +48,275 @@
       </div>
     </section>
 
-    <!-- Features -->
-    <section class="features">
-      <h2 class="section-heading">What You Control</h2>
-
-      <div class="feature-grid">
-        <div class="feature-card">
-          <div class="feature-icon">
-            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2v-4M9 21H5a2 2 0 01-2-2v-4m0-4h18"/>
-            </svg>
-          </div>
-          <h3>CPU Clocks</h3>
-          <p>Per-cluster frequency limits, governor selection, and scheduling profiles. Full cpufreq control.</p>
-        </div>
-
-        <div class="feature-card">
-          <div class="feature-icon">
-            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <rect x="4" y="4" width="16" height="16" rx="2"/>
-              <path d="M9 9h6v6H9z"/>
-              <path d="M9 1v3M15 1v3M9 20v3M15 20v3M1 9h3M1 15h3M20 9h3M20 15h3"/>
-            </svg>
-          </div>
-          <h3>GPU Frequency</h3>
-          <p>Mali and Adreno frequency caps, governor tuning, and power-level selection.</p>
-        </div>
-
-        <div class="feature-card">
-          <div class="feature-icon">
-            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M22 12H2M5.45 5.11L2 12v6a2 2 0 002 2h16a2 2 0 002-2v-6l-3.45-6.89A2 2 0 0016.76 4H7.24a2 2 0 00-1.79 1.11z"/>
-              <line x1="6" y1="16" x2="6.01" y2="16"/>
-              <line x1="10" y1="16" x2="10.01" y2="16"/>
-            </svg>
-          </div>
-          <h3>Memory &amp; I/O</h3>
-          <p>VM tunables, KSM control, I/O scheduler selection, and readahead tuning.</p>
-        </div>
-
-        <div class="feature-card">
-          <div class="feature-icon">
-            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M5 12.55a11 11 0 0114.08 0M1.42 9a16 16 0 0121.16 0M8.53 16.11a6 6 0 016.95 0M12 20h.01"/>
-            </svg>
-          </div>
-          <h3>Network</h3>
-          <p>TCP congestion control, queueing disciplines, and buffer tuning.</p>
-        </div>
-
-        <div class="feature-card">
-          <div class="feature-icon">
-            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/>
-            </svg>
-          </div>
-          <h3>Kernel Flashing</h3>
-          <p>Flash AnyKernel3 zips directly through the app via your root manager.</p>
-        </div>
-
-        <div class="feature-card">
-          <div class="feature-icon">
-            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="12" cy="12" r="10"/>
-              <path d="M12 6v6l4 2"/>
-            </svg>
-          </div>
-          <h3>Haptic Tuning</h3>
-          <p>Per-vendor brake, tail, and compensation parameters for haptic motors.</p>
-        </div>
-
-        <div class="feature-card">
-          <div class="feature-icon">
-            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
-              <circle cx="12" cy="12" r="3"/>
-            </svg>
-          </div>
-          <h3>Vision / Color</h3>
-          <p>Per-app color bias: saturation, warmth, and grayscale overrides.</p>
-        </div>
-
-        <div class="feature-card">
-          <div class="feature-icon">
-            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M12 20V10M6 20V4M18 20v-4"/>
-            </svg>
-          </div>
-          <h3>Capability Matrix</h3>
-          <p>See exactly which kernel APIs your device supports at a glance.</p>
+    <!-- Stats Dashboard -->
+    <section class="showcase" id="stats">
+      <div class="showcase-content">
+        <span class="showcase-label">Stats Dashboard</span>
+        <h2>Know your device inside out</h2>
+        <p>Live battery drain tracking with day-over-day comparison, screen-on-time estimates, thermal headroom monitoring with throttle event counting, and CPU load history. All metrics graphed over time so you can see the impact of every tweak.</p>
+        <ul class="showcase-highlights">
+          <li>Battery drain rate with historical sparkline</li>
+          <li>Peak temperature headroom percentage</li>
+          <li>Throttle event counter</li>
+          <li>Community Benchmarks: compare your config against other users</li>
+        </ul>
+      </div>
+      <div class="showcase-phone">
+        <div class="phone-frame">
+          <img src="images/screenshot-hub.png" alt="FauxClock Stats dashboard showing battery drain, SOT, thermal headroom, and CPU load" loading="lazy"/>
         </div>
       </div>
     </section>
 
-    <!-- Pro -->
-    <section class="pro">
-      <div class="pro-inner">
-        <h2 class="section-heading">FauxClock Pro</h2>
-        <p class="pro-subtitle">Advanced performance features for power users.</p>
-
-        <div class="pro-grid">
-          <div class="pro-card">
-            <h3>SuperFDO</h3>
-            <p>System-wide uclamp floor with workload classification and thermal gating. Goes beyond static tweaks with adaptive, sensor-driven scheduling.</p>
-          </div>
-          <div class="pro-card">
-            <h3>Per-App Uclamp</h3>
-            <p>Per-TID sched_setattr with in-app GUI. Pin minimum performance floors to individual threads without editing JSON configs.</p>
-          </div>
-          <div class="pro-card">
-            <h3>Thread Control</h3>
-            <p>Per-TID cluster pinning (sched_setaffinity), I/O priority (ionice), and nice values (renice). Full thread placement control through a real GUI.</p>
-          </div>
-        </div>
-
-        <div class="pro-cta">
-          <p>Activate with a license key at <code>Settings &rarr; FauxClock Pro</code></p>
+    <!-- Tune -->
+    <section class="showcase showcase-reverse" id="tune">
+      <div class="showcase-content">
+        <span class="showcase-label">Tune</span>
+        <h2>Full kernel control surface</h2>
+        <p>Access every tunable your kernel exposes: CPU frequency limits, GPU governor, VM/memory settings, I/O schedulers, and a capability matrix showing exactly which APIs your device supports. Thread Inspector lets you watch live thread placement.</p>
+        <ul class="showcase-highlights">
+          <li>Per-cluster CPU frequency and governor</li>
+          <li>GPU frequency caps (Mali/Adreno)</li>
+          <li>Memory, KSM, and I/O scheduler</li>
+          <li>Kernel capability matrix</li>
+        </ul>
+      </div>
+      <div class="showcase-phone">
+        <div class="phone-frame">
+          <img src="images/screenshot-tune.png" alt="FauxClock Tune screen showing CPU, GPU, Memory, Capability Matrix, Thread Inspector, Thread Control, and SuperFDO" loading="lazy"/>
         </div>
       </div>
     </section>
 
-    <!-- Community -->
-    <section class="community">
-      <h2 class="section-heading">Community Benchmarks</h2>
-      <p class="community-desc">Opt-in anonymous telemetry aggregates battery drain, thermal headroom, and throttle events across devices. See how your kernel config stacks up against the community.</p>
+    <!-- CPU Detail -->
+    <section class="showcase" id="cpu">
+      <div class="showcase-content">
+        <span class="showcase-label">CPU Clocks</span>
+        <h2>Per-cluster precision</h2>
+        <p>See every CPU cluster, its core count, current frequency, and active governor at a glance. Switch between Battery, Balanced, and Responsive performance profiles, or go advanced for manual frequency and governor control per cluster.</p>
+        <ul class="showcase-highlights">
+          <li>Cluster topology with live frequency readout</li>
+          <li>One-tap performance profiles with recommendations</li>
+          <li>Per-cluster governor selection (schedutil, performance, etc.)</li>
+          <li>Advanced mode for manual min/max frequency tuning</li>
+        </ul>
+      </div>
+      <div class="showcase-phone">
+        <div class="phone-frame">
+          <img src="images/screenshot-cpu.png" alt="FauxClock CPU detail showing 10 cores, 3 clusters, performance profiles, and per-cluster frequency controls" loading="lazy"/>
+        </div>
+      </div>
+    </section>
+
+    <!-- Power -->
+    <section class="showcase showcase-reverse" id="power">
+      <div class="showcase-content">
+        <span class="showcase-label">Battery Control</span>
+        <h2>Extend battery lifespan</h2>
+        <p>Full battery health dashboard: design capacity tracking, cycle count, live temperature, and current draw. Set a charge limit (50-100%) to stop charging at your target level. Choose between Default, Adaptive, and Longlife charging policies.</p>
+        <ul class="showcase-highlights">
+          <li>Battery health grade with capacity percentage</li>
+          <li>Charge limit slider (stops charging at target)</li>
+          <li>Cycle count with optional reset</li>
+          <li>Adaptive and Longlife charging policies</li>
+        </ul>
+      </div>
+      <div class="showcase-phone">
+        <div class="phone-frame">
+          <img src="images/screenshot-power.png" alt="FauxClock Battery Control showing health status, charge limit slider, and charging policy selection" loading="lazy"/>
+        </div>
+      </div>
+    </section>
+
+    <!-- Apps -->
+    <section class="showcase" id="apps">
+      <div class="showcase-content">
+        <span class="showcase-label">Per-App Tools</span>
+        <h2>App-level customization</h2>
+        <p>Per-app performance profiles let you bias individual apps toward performance or power saving. Vision Bias gives you per-app color control: adjust saturation, warmth, and grayscale. Haptic Panel tunes your device's vibration motor at the vendor driver level.</p>
+        <ul class="showcase-highlights">
+          <li>Per-App Profiles: bias apps toward perf or battery</li>
+          <li>Vision Bias: saturation, warmth, grayscale per app</li>
+          <li>Haptic Panel: per-vendor brake, tail, compensation tuning</li>
+        </ul>
+      </div>
+      <div class="showcase-phone">
+        <div class="phone-frame">
+          <img src="images/screenshot-apps.png" alt="FauxClock Apps screen showing Per-App Profiles, Vision Bias, and Haptic Panel" loading="lazy"/>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stealth -->
+    <section class="showcase showcase-reverse" id="stealth">
+      <div class="showcase-content">
+        <span class="showcase-label">Stealth</span>
+        <h2>Root without compromise</h2>
+        <p>Banking Mode orchestrates your full root-hiding stack in one place: KernelSU umount, TrickyStore, keybox management, and integrity checking. See what root-detection libraries actually flag on your device and fix it before your bank does.</p>
+        <ul class="showcase-highlights">
+          <li>Banking Mode: one-stop root-hiding orchestration</li>
+          <li>Identity: TrickyStore and keybox management</li>
+          <li>WebUI X Modules: KernelSU/Magisk/APatch module configs</li>
+          <li>Integrity probe: see what detection libraries flag</li>
+        </ul>
+      </div>
+      <div class="showcase-phone">
+        <div class="phone-frame">
+          <img src="images/screenshot-stealth.png" alt="FauxClock Stealth screen showing Banking Mode, Identity, WebUI X Modules, and Integrity" loading="lazy"/>
+        </div>
+      </div>
+    </section>
+
+    <!-- Module Ecosystem -->
+    <section class="showcase" id="modules">
+      <div class="showcase-content">
+        <span class="showcase-label">Module Ecosystem</span>
+        <h2>Every module, one dashboard</h2>
+        <p>FauxClock scans your KernelSU, Magisk, or APatch module directory and presents every installed module with version, author, description, and enable/disable controls. Modules are auto-categorized into Security, Performance, and System groups. Conflict detection warns when modules overlap (e.g., dual Zygisk implementations).</p>
+        <ul class="showcase-highlights">
+          <li>Auto-discovery: KernelSU + Magisk + APatch modules</li>
+          <li>Categorized: Security, Performance, System groups</li>
+          <li>Enable/disable modules without rebooting into manager</li>
+          <li>Conflict detection for overlapping modules</li>
+          <li>One-tap Configure opens WebUI X for modules that ship a web interface</li>
+        </ul>
+      </div>
+      <div class="showcase-phone">
+        <div class="phone-frame">
+          <img src="images/screenshot-modules.png" alt="FauxClock Module Ecosystem showing 5 installed modules: Play Integrity Fork, Tricky Store, Zygisk Assistant categorized under Security and Performance" loading="lazy"/>
+        </div>
+      </div>
+    </section>
+
+    <!-- WebUI X -->
+    <section class="showcase showcase-reverse" id="webui">
+      <div class="showcase-content">
+        <span class="showcase-label">WebUI X</span>
+        <h2>Module configuration, built in</h2>
+        <p>Many KernelSU and Magisk modules ship their own web-based configuration pages. FauxClock renders these inline through WebUI X, so you never leave the app. Tricky Store's app attestation list, Play Integrity Fix's fingerprint editor, and any module with a webroot directory all load directly inside FauxClock's native chrome.</p>
+        <ul class="showcase-highlights">
+          <li>Renders module web interfaces inline (no browser needed)</li>
+          <li>Auto-discovers modules with webroot directories</li>
+          <li>Full save/apply support for module configs</li>
+          <li>Works with Tricky Store, PIF, and any WebUI-enabled module</li>
+        </ul>
+      </div>
+      <div class="showcase-phone">
+        <div class="phone-frame">
+          <img src="images/screenshot-webui.png" alt="FauxClock WebUI X showing Tricky Store's app attestation configuration with banking apps like BofA, Capital One, Chase, and Citi Mobile" loading="lazy"/>
+        </div>
+      </div>
+    </section>
+
+    <!-- Device Info -->
+    <section class="showcase" id="tools">
+      <div class="showcase-content">
+        <span class="showcase-label">Tools &amp; Settings</span>
+        <h2>Everything at a glance</h2>
+        <p>Detailed device information: Android version, SoC, kernel version, build fingerprint, and uptime. Kernel flashing lets you apply AnyKernel3 zips directly through the app. Network tuning covers TCP congestion control, queueing disciplines, and buffer sizes.</p>
+        <ul class="showcase-highlights">
+          <li>Device info: SoC, kernel, build, uptime</li>
+          <li>AnyKernel3 kernel flashing via root manager</li>
+          <li>TCP congestion control and network tuning</li>
+          <li>FauxClock Pro license activation</li>
+        </ul>
+      </div>
+      <div class="showcase-phone">
+        <div class="phone-frame">
+          <img src="images/screenshot-tools.png" alt="FauxClock Settings showing device info: Android 16, Pixel 7, Google GS201, kernel version, and uptime" loading="lazy"/>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pro heading -->
+    <section class="pro-heading" id="pro">
+      <h2 class="section-heading">FauxClock Pro</h2>
+      <p class="pro-heading-sub">Advanced performance features for power users. Activate with a license key at <code>Settings &rarr; FauxClock Pro</code>.</p>
+    </section>
+
+    <!-- SuperFDO -->
+    <section class="showcase showcase-reverse" id="superfdo">
+      <div class="showcase-content">
+        <span class="showcase-label showcase-label-pro">Pro &middot; SuperFDO</span>
+        <h2>Adaptive, sensor-driven scheduling</h2>
+        <p>SuperFDO goes beyond static CPU tweaks. It classifies your workload in real time (IDLE, LIGHT, MODERATE, HEAVY), applies per-SoC preset catalogs tuned to your OEM silicon, and gates uclamp floors against live thermal headroom so the scheduler backs off before you throttle.</p>
+        <ul class="showcase-highlights">
+          <li>Real-time workload classification with efficiency scoring</li>
+          <li>Per-SoC preset catalog (Tensor G2, Snapdragon, Exynos, etc.)</li>
+          <li>ADPF integration: uclamp_min floor gated on thermal state</li>
+          <li>Per-cluster frequency caps with live thermal headroom readout</li>
+          <li>Foreground hint for interactive response tuning</li>
+        </ul>
+      </div>
+      <div class="showcase-phone">
+        <div class="phone-frame">
+          <img src="images/screenshot-superfdo.png" alt="FauxClock SuperFDO dashboard showing workload IDLE, Tensor G2 preset catalog, ADPF uclamp gating, thermal headroom 43%, and cluster frequency caps" loading="lazy"/>
+        </div>
+      </div>
+    </section>
+
+    <!-- Thread Control -->
+    <section class="showcase" id="threadcontrol">
+      <div class="showcase-content">
+        <span class="showcase-label showcase-label-pro">Pro &middot; Thread Control</span>
+        <h2>Pin threads where they belong</h2>
+        <p>Thread Control gives you per-TID control over cluster affinity (sched_setaffinity), I/O priority (ionice), and nice values (renice). Pick any running app and see its threads, then pin performance-critical threads to big cores and demote background work to efficiency cores. No shell commands required.</p>
+        <ul class="showcase-highlights">
+          <li>Per-thread cluster pinning via sched_setaffinity</li>
+          <li>I/O priority control (ionice class and level)</li>
+          <li>Nice value adjustment per thread</li>
+          <li>Live thread list for any running process</li>
+        </ul>
+      </div>
+      <div class="showcase-phone">
+        <div class="phone-frame">
+          <img src="images/screenshot-threadcontrol.png" alt="FauxClock Thread Control showing app picker with 90 running processes" loading="lazy"/>
+        </div>
+      </div>
+    </section>
+
+    <!-- Per-App Uclamp -->
+    <section class="showcase showcase-reverse" id="perappuclamp">
+      <div class="showcase-content">
+        <span class="showcase-label showcase-label-pro">Pro &middot; Per-App Uclamp</span>
+        <h2>Thread-level performance floors</h2>
+        <p>Per-App Uclamp uses sched_setattr to set minimum performance floors on individual threads. Unlike system-wide boosting, this targets only the threads that matter: your game's render thread, your camera's ISP pipeline, or your DAW's audio callback. No JSON configs, no adb shell.</p>
+        <ul class="showcase-highlights">
+          <li>Per-TID sched_setattr with in-app GUI</li>
+          <li>Pin uclamp_min floors to specific threads</li>
+          <li>Surgical: boost what matters, leave the rest efficient</li>
+          <li>Thread-level granularity no other Android tool offers</li>
+        </ul>
+      </div>
+      <div class="showcase-phone">
+        <div class="phone-frame">
+          <img src="images/screenshot-apps.png" alt="FauxClock Per-App tools showing profile management, Vision Bias, and Haptic Panel" loading="lazy"/>
+        </div>
+      </div>
+    </section>
+
+    <!-- Community Benchmarks -->
+    <section class="showcase" id="community">
+      <div class="showcase-content">
+        <span class="showcase-label">Community Benchmarks</span>
+        <h2>See how your config stacks up</h2>
+        <p>Opt-in anonymous telemetry aggregates drain rates, governor choices, scheduler picks, and TCP settings across all FauxClock users on your device family. See your drain vs. the community average, find out where you rank, and discover what the top performers are running.</p>
+        <ul class="showcase-highlights">
+          <li>Your drain rate vs. community average (mA/hr)</li>
+          <li>Percentile ranking ("You're in the top 36%")</li>
+          <li>Most Popular Settings: governor, scheduler adoption rates</li>
+          <li>Top Performers: what the lowest-drain users run</li>
+        </ul>
+      </div>
+      <div class="showcase-phone">
+        <div class="phone-frame">
+          <img src="images/screenshot-community.png" alt="FauxClock Community Benchmarks showing drain comparison, popular settings, and top performer configs" loading="lazy"/>
+        </div>
+      </div>
     </section>
 
     <!-- Download -->
-    <section class="download">
+    <section class="download" id="download">
       <div class="download-inner">
         <h2 class="section-heading">Get FauxClock</h2>
         <div class="download-grid">

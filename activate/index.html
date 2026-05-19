@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FauxClock Pro - Activate</title>
+<style>
+  :root { color-scheme: dark; }
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    max-width: 32rem; margin: 2rem auto; padding: 0 1.25rem; line-height: 1.6;
+    background: #0a0b0f; color: #E8E8EC;
+  }
+  h1 { font-size: 1.5rem; margin-bottom: 0.25rem; }
+  h2 { font-size: 1.15rem; margin-top: 1.5rem; }
+  .key {
+    font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 1.25rem; padding: 0.75rem 1rem; border-radius: 0.5rem;
+    background: rgba(127, 127, 127, 0.12); display: inline-block;
+    user-select: all; word-break: break-all; border: 1px solid #2a2c36;
+  }
+  a.button {
+    display: inline-block; padding: 0.75rem 1.25rem; border-radius: 0.5rem;
+    background: #1565C0; color: white; text-decoration: none; font-weight: 600;
+    margin: 0.5rem 0.5rem 0.5rem 0; transition: background 0.15s;
+  }
+  a.button:hover { background: #1976D2; }
+  a.secondary {
+    background: transparent; color: #E8E8EC; border: 1px solid #2a2c36;
+  }
+  a.secondary:hover { border-color: #555566; }
+  ol { padding-left: 1.25rem; }
+  li { margin-bottom: 0.5rem; }
+  small { opacity: 0.6; }
+  a { color: #42A5F5; }
+  #with-key, #no-key { display: none; }
+</style>
+</head>
+<body>
+
+<h1>FauxClock Pro</h1>
+
+<div id="with-key">
+  <p>Thanks for supporting the project. Your license key:</p>
+  <p><span class="key" id="key-display"></span></p>
+
+  <h2>Install the app</h2>
+  <ol>
+    <li>Download the latest APK:
+      <a class="button" href="https://github.com/faux123/Faux123_KEP/releases/latest">Download APK</a>
+    </li>
+    <li>Open the APK on your Android device. Allow install from this source if prompted.</li>
+    <li>Open FauxClock and go to <strong>Settings &rarr; About &rarr; License</strong>.</li>
+    <li>Paste the key above, or tap the button below to hand it directly to the app.</li>
+  </ol>
+
+  <p><a class="button" id="deeplink">Open in FauxClock</a></p>
+
+  <p><small>Patreon supporter? Your license stays active for as long as your pledge is.
+  Lifetime keys via Gumroad never expire. They re-check daily so a leaked key can be
+  revoked, but a real owner sees nothing.</small></p>
+</div>
+
+<div id="no-key">
+  <p>This page activates a FauxClock Pro license. Open the link from your
+  purchase email. It includes the <code>?key=FXCK-XXXX-XXXX-XXXX</code>
+  parameter that this page needs.</p>
+
+  <p>
+    <a class="button" href="https://github.com/faux123/Faux123_KEP/releases/latest">Download FauxClock APK</a>
+  </p>
+
+  <p>Don't have a license yet?
+    <a href="https://gumroad.com/l/fauxclock-pro">Gumroad</a> for a one-time purchase, or
+    <a href="https://patreon.com/faux123">Patreon</a> to support ongoing development.
+  </p>
+</div>
+
+<p><small>Trouble? Open an issue at
+<a href="https://github.com/faux123/Faux123_KEP/issues">github.com/faux123/Faux123_KEP/issues</a>.</small></p>
+
+<script>
+(function() {
+  var params = new URLSearchParams(window.location.search);
+  var key = (params.get('key') || '').trim();
+  // Basic shape check: FXCK-XXXX-XXXX-XXXX (16+ chars after normalization)
+  var isValid = /^FXCK-[A-Z0-9]{4}-[A-Z0-9]{4}-[A-Z0-9]{4}$/i.test(key);
+
+  if (isValid) {
+    var safe = key.replace(/[<>"'&]/g, '');
+    document.getElementById('key-display').textContent = safe;
+    document.getElementById('deeplink').href =
+      'https://fauxclock.canonspike.com/activate?key=' + encodeURIComponent(safe);
+    document.getElementById('with-key').style.display = 'block';
+  } else {
+    document.getElementById('no-key').style.display = 'block';
+  }
+})();
+</script>
+</body>
+</html>
