@@ -44,7 +44,7 @@
           <a href="https://github.com/faux123/fauxclock-public" class="btn btn-secondary">Issue Tracker</a>
         </div>
 
-        <p class="hero-version">v1.0.30 &middot; Requires root (Magisk / KernelSU / APatch)</p>
+        <p class="hero-version">v1.0.31 &middot; Requires root (Magisk / KernelSU / APatch)</p>
       </div>
     </section>
 
@@ -53,17 +53,18 @@
       <div class="showcase-content">
         <span class="showcase-label">Stats Dashboard</span>
         <h2>Know your device inside out</h2>
-        <p>Live battery drain tracking with day-over-day comparison, screen-on-time estimates, thermal headroom monitoring with throttle event counting, and CPU load history. All metrics graphed over time so you can see the impact of every tweak.</p>
+        <p>Health Streaks track your charge discipline, thermal behavior, and device stability over time. Live battery drain with day-over-day comparison, SOT remaining estimates, thermal headroom with throttle event counting, and CPU load history with sparklines.</p>
         <ul class="showcase-highlights">
+          <li>Health Streaks: charge discipline, cool streak, rock solid</li>
           <li>Battery drain rate with historical sparkline</li>
-          <li>Peak temperature headroom percentage</li>
-          <li>Throttle event counter</li>
-          <li>Community Benchmarks: compare your config against other users</li>
+          <li>SOT Remaining estimate</li>
+          <li>Peak temperature headroom and throttle events</li>
+          <li>CPU load with live sparkline</li>
         </ul>
       </div>
       <div class="showcase-phone">
         <div class="phone-frame">
-          <img src="images/screenshot-hub.png" alt="FauxClock Stats dashboard showing battery drain, SOT, thermal headroom, and CPU load" loading="lazy"/>
+          <img src="images/screenshot-hub.png" alt="FauxClock Stats dashboard showing Health Streaks, battery drain, SOT remaining, thermal headroom, and CPU load" loading="lazy"/>
         </div>
       </div>
     </section>
@@ -73,17 +74,18 @@
       <div class="showcase-content">
         <span class="showcase-label">Tune</span>
         <h2>Full kernel control surface</h2>
-        <p>Access every tunable your kernel exposes: CPU frequency limits, GPU governor, VM/memory settings, I/O schedulers, and a capability matrix showing exactly which APIs your device supports. Thread Inspector lets you watch live thread placement.</p>
+        <p>Access every tunable your kernel exposes: per-cluster CPU frequency and governor, GPU frequency caps, VM and memory tunables, I/O schedulers, TCP congestion and network buffer tuning, and per-vendor haptic motor calibration.</p>
         <ul class="showcase-highlights">
           <li>Per-cluster CPU frequency and governor</li>
           <li>GPU frequency caps (Mali/Adreno)</li>
-          <li>Memory, KSM, and I/O scheduler</li>
-          <li>Kernel capability matrix</li>
+          <li>Memory &amp; Storage: VM tunables, KSM, I/O scheduler</li>
+          <li>Network Tweaks: TCP congestion, qdisc, buffer tuning</li>
+          <li>Haptic Panel: per-vendor brake, tail, compensation tuning</li>
         </ul>
       </div>
       <div class="showcase-phone">
         <div class="phone-frame">
-          <img src="images/screenshot-tune.png" alt="FauxClock Tune screen showing CPU, GPU, Memory, Capability Matrix, Thread Inspector, Thread Control, and SuperFDO" loading="lazy"/>
+          <img src="images/screenshot-tune.png" alt="FauxClock Tune screen showing CPU, GPU Tweaks, Memory and Storage, Network Tweaks, Haptic Panel, and SuperFDO" loading="lazy"/>
         </div>
       </div>
     </section>
@@ -103,7 +105,7 @@
       </div>
       <div class="showcase-phone">
         <div class="phone-frame">
-          <img src="images/screenshot-cpu.png" alt="FauxClock CPU detail showing 10 cores, 3 clusters, performance profiles, and per-cluster frequency controls" loading="lazy"/>
+          <img src="images/screenshot-cpu.png" alt="FauxClock CPU detail showing 10 cores, 3 clusters, Adaptive profile, and per-cluster frequency with governor controls" loading="lazy"/>
         </div>
       </div>
     </section>
@@ -133,16 +135,17 @@
       <div class="showcase-content">
         <span class="showcase-label">Per-App Tools</span>
         <h2>App-level customization</h2>
-        <p>Per-app performance profiles let you bias individual apps toward performance or power saving. Vision Bias gives you per-app color control: adjust saturation, warmth, and grayscale. Haptic Panel tunes your device's vibration motor at the vendor driver level.</p>
+        <p>Per-app performance profiles let you bias individual apps toward performance or power saving. Vision Bias gives per-app color control. Capability Matrix shows which kernel APIs your device supports. Thread Inspector shows live thread placement across CPU clusters.</p>
         <ul class="showcase-highlights">
           <li>Per-App Profiles: bias apps toward perf or battery</li>
           <li>Vision Bias: saturation, warmth, grayscale per app</li>
-          <li>Haptic Panel: per-vendor brake, tail, compensation tuning</li>
+          <li>Capability Matrix: what kernel APIs your device supports</li>
+          <li>Thread Inspector: live thread CPU/IO/scheduler placement</li>
         </ul>
       </div>
       <div class="showcase-phone">
         <div class="phone-frame">
-          <img src="images/screenshot-apps.png" alt="FauxClock Apps screen showing Per-App Profiles, Vision Bias, and Haptic Panel" loading="lazy"/>
+          <img src="images/screenshot-apps.png" alt="FauxClock Apps screen showing Per-App Profiles, Vision Bias, Capability Matrix, Thread Inspector, and Thread Control" loading="lazy"/>
         </div>
       </div>
     </section>
@@ -183,7 +186,7 @@
       </div>
       <div class="showcase-phone">
         <div class="phone-frame">
-          <img src="images/screenshot-modules.png" alt="FauxClock Module Ecosystem showing 5 installed modules: Play Integrity Fork, Tricky Store, Zygisk Assistant categorized under Security and Performance" loading="lazy"/>
+          <img src="images/screenshot-modules.png" alt="FauxClock Module Ecosystem showing 7 installed modules: Play Integrity Fix, Tricky Store, Zygisk Assistant categorized under Security and Performance" loading="lazy"/>
         </div>
       </div>
     </section>
@@ -213,17 +216,17 @@
       <div class="showcase-content">
         <span class="showcase-label">Tools &amp; Settings</span>
         <h2>Everything at a glance</h2>
-        <p>Detailed device information: Android version, SoC, kernel version, build fingerprint, and uptime. Kernel flashing lets you apply AnyKernel3 zips directly through the app. Network tuning covers TCP congestion control, queueing disciplines, and buffer sizes.</p>
+        <p>Module Ecosystem scans all installed KSU/Magisk/APatch modules with categorization and conflict detection. Quick Reboot to system, recovery, or bootloader. Kernel Flashing applies AnyKernel3 zips directly through the app. Settings covers theme, font scale, backup, and device info.</p>
         <ul class="showcase-highlights">
-          <li>Device info: SoC, kernel, build, uptime</li>
+          <li>Module Ecosystem: categorized, conflict-checked, with WebUI links</li>
+          <li>Quick Reboot: system, recovery, or bootloader</li>
           <li>AnyKernel3 kernel flashing via root manager</li>
-          <li>TCP congestion control and network tuning</li>
-          <li>FauxClock Pro license activation</li>
+          <li>Settings &amp; About: theme, font scale, backup, device info</li>
         </ul>
       </div>
       <div class="showcase-phone">
         <div class="phone-frame">
-          <img src="images/screenshot-tools.png" alt="FauxClock Settings showing device info: Android 16, Pixel 7, Google GS201, kernel version, and uptime" loading="lazy"/>
+          <img src="images/screenshot-tools.png" alt="FauxClock Tools showing Module Ecosystem, Quick Reboot, Kernel Flashing, and Settings" loading="lazy"/>
         </div>
       </div>
     </section>
@@ -290,7 +293,7 @@
       </div>
       <div class="showcase-phone">
         <div class="phone-frame">
-          <img src="images/screenshot-apps.png" alt="FauxClock Per-App tools showing profile management, Vision Bias, and Haptic Panel" loading="lazy"/>
+          <img src="images/screenshot-apps.png" alt="FauxClock Per-App tools showing Per-App Profiles, Vision Bias, Capability Matrix, Thread Inspector, and Thread Control" loading="lazy"/>
         </div>
       </div>
     </section>
