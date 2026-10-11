@@ -1,0 +1,7 @@
+# The landing page moved to the FauxClockNG site on 2026-10-11.
+# /activate and /.well-known/assetlinks.json stay here: the sideload build's
+# App Links name this host (app/src/full/AndroidManifest.xml in Faux123_KEP).
+/ https://fauxclockng.canonspike.com/ 301
+/index.html https://fauxclockng.canonspike.com/ 301
+/style.css https://fauxclockng.canonspike.com/ 301
+/images/* https://fauxclockng.canonspike.com/ 301
